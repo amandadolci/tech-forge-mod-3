@@ -1,11 +1,12 @@
 public class Main {
     public static void main(String[] args) {
-        Universidade princeton = new Universidade("Universidade de Princeton");
-        Universidade cambridge = new Universidade("Universidade de Cambridge");
+        Cliente cliente = new Cliente("131217", "Amanda D Figueiredo", 130000);
+        cliente.depositar(500.00);
+        System.out.println(cliente.getSaldoAtual());
 
-        Pessoa einstein = new Pessoa("Albert Einstein", "14/03/1879", princeton, "física");
-        Pessoa newton = new Pessoa("Isaac Newton", "4/01/1643", cambridge, "matemática");
+        cliente.sacar(200.00);
+        System.out.println(cliente.getSaldoAtual());
 
-        System.out.println(einstein.getNomeCursoUniversidade());
+        cliente.sacar(2000.00);
     }
 }
